@@ -26,6 +26,11 @@ app.use("/corporateTrainee", corporateRoutes);
 app.use("/users", userRoutes);
 app.use("/reportedProblems", reportedProblems);
 
+
+app.get("/", (req, res) => {
+  res.send("Hello to the API");
+});
+
 const stripe = new Stripe("sk_test");
 
 const port = process.env.PORT || 8000;
