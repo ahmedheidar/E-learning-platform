@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API = axios.create({ baseURL: "http://localhost:8000/instructor" });
+// const API = axios.create({ baseURL: "http://localhost:8000/instructor" });
+const API = axios.create({ baseURL: "https://e-learning-platform-server-rust.vercel.app/instructor" });
 
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
